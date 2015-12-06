@@ -18,10 +18,20 @@
 
 # Notes:
 #
-# - This script was only tested on Ubuntu 12.04 and Gedit 3.4, but it should
-#   work in other linux distros as well.
+# - This script was only tested on:
+#	- Ubuntu 12.04 with Gedit 3.4 as well as on
+#	- Red Hat Enterprise Linux 6.7 with 2.28.4,
+#   but it should work in other linux distros as well.
 
-INSTALL_DIR="$HOME/.local/share/gtksourceview-3.0/styles"
+# default install dirs: LOCAL (in home dir) && NEW (3.x version)
+LOCAL=1
+LATEST=1
+
+INSTALL_DIR_LOCAL_LATEST="$HOME/.local/share/gtksourceview-3.0/styles"
+INSTALL_DIR_GLOBAL_LATEST="/usr/share/gtksourceview-3.0/styles"
+INSTALL_DIR_LOCAL_2X="$HOME/.gnome2/gedit/styles"
+INSTALL_DIR_GLOBAL_2X="/usr/share/gtksourceview-2.0/styles"
+INSTALL_DIR="" # set in evaldir
 
 # Print usage instructions of the script
 function usage {
@@ -33,6 +43,7 @@ This script installs the bundled theme styles for gedit.
 OPTIONS:
   -h    Shows this message
   -a    Install for all users
+  -o    Old version support (Gedit 2.x version)
 EOF
 }
 
@@ -61,18 +72,39 @@ function cpfiles {
 	return 0
 }
 
+function evaldir {
+	if [[ $LOCAL -eq 1 ]]; then
+		if [[ $LATEST -eq 1 ]]; then
+			INSTALL_DIR="$INSTALL_DIR_LOCAL_LATEST";
+		else
+			INSTALL_DIR="$INSTALL_DIR_LOCAL_2X";
+		fi
+	else
+		if [[ $LATEST -eq 1 ]]; then
+			INSTALL_DIR="$INSTALL_DIR_GLOBAL_LATEST";
+		else
+			INSTALL_DIR="$INSTALL_DIR_GLOBAL_2X";
+		fi
+	fi
+}
+
 # Loop through passed arguments
-while getopts "ha" OPTION; do
+while getopts "hao" OPTION; do
 	case $OPTION in
 		h)
 			usage
 			exit 1
 			;;
 		a)
-			INSTALL_DIR="/usr/share/gtksourceview-3.0/styles"
+			LOCAL=0
+			;;
+		o)
+			LATEST=0
 			;;
 	esac
 done
+
+evaldir
 
 echo -e "Installing Gedit themes to $INSTALL_DIR\n..."
 

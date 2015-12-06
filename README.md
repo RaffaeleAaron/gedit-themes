@@ -1,4 +1,4 @@
-# Themes for Gedit 3
+# Themes for Gedit 3 and 2
 
 Version 0.3.0
 
@@ -26,6 +26,12 @@ Pass the `-a` option to the script to install the themes for all users on the sy
     ./install -a
 
 You will need sudo access to install for all users.
+
+Pass the `-o` option to the script to install the themes for gedit 2.x version:
+
+    ./install -o
+
+Please note you can combine `-o` with `-a` option, like: `-oa`, to install for all users for 2.x version.
 
 ## Changelog
 
