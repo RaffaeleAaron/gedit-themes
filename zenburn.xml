@@ -6,7 +6,7 @@
 	<style foreground="#dca3a3" name="def:boolean"/>
 	<style foreground="#7f9f7f" name="def:comment"/>
 	<style bold="true" foreground="#dca3a3" name="def:constant"/>
-	<style background="#8faf9f" bold="true" foreground="#000d18" name="cursor"/>
+	<style background="#8faf9f" bold="true" foreground="#dcdccc" name="cursor"/>
 	<style background="#313c36" bold="true" foreground="#709080" name="diff:added-line"/>
 	<style background="#333333" name="diff:changed-line"/>
 	<style background="#464646" foreground="#333333" name="diff:removed-line"/>
