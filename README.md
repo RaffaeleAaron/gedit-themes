@@ -8,6 +8,9 @@ This is based on the infamous mig/gedit-themes repository, but since it seems to
 requests anymore I decided it was time to make things happen again. This fixes the install script and updates some
 themes that looked terrible when the option to highlight the current line was selected.
 
+**Note:** This fork contains all the changes that were done to the original repository after the fork (only 6 commits),
+and includes extra bug fixes and new themes as well.
+
 The install script could use some more testing, but should be fully functional as it is.
 
 ## Usage
@@ -20,7 +23,7 @@ or by cloning it with git using the command:
 After it's downloaded, run the included install script to install all the themes for the current user only:
 
     ./install
-    
+
 Pass the `-a` option to the script to install the themes for all users on the system:
 
     ./install -a
@@ -46,7 +49,7 @@ Please note you can combine `-o` with `-a` option, like: `-oa`, to install for a
  - Replace install script with new one that works with Gedit 3
  - Remove railscasts2 and Rainbow Neon themes
  - Modify some themes that had no defined background color for current-line so that it always looks good
- 
+
 ## Acknowledgements
 
 This theme bundle is based on the work of Matthew Swasey (mig). Also includes a build script which is heavily inspired

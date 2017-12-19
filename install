@@ -19,8 +19,9 @@
 # Notes:
 #
 # - This script was only tested on:
-#	- Ubuntu 12.04 with Gedit 3.4 as well as on
-#	- Red Hat Enterprise Linux 6.7 with 2.28.4,
+#	- Ubuntu 12.04 with Gedit 3.4
+#	- Ubuntu 16.04 with Gedit 3.18.3
+#	- Red Hat Enterprise Linux 6.7 with 2.28.4
 #   but it should work in other linux distros as well.
 
 # default install dirs: LOCAL (in home dir) && NEW (3.x version)
@@ -61,14 +62,14 @@ function chkdir {
 	return 0
 }
 
-# Copy theme files to destination directory 
+# Copy theme files to destination directory
 function cpfiles {
 	if [[ $INSTALL_DIR = /usr/* ]]; then
 		sudo cp *.xml "$INSTALL_DIR" || { return 1; }
 	else
 		cp *.xml "$INSTALL_DIR" || { return 1; }
 	fi
-	
+
 	return 0
 }
 
@@ -113,7 +114,7 @@ SUCCESS=$?
 
 if [ $SUCCESS -eq 0 ]; then
 	cpfiles
-	
+
 	if [ $? -eq 0 ]; then
 		echo -e "...\nAll done!\n:)"
 		exit 0
