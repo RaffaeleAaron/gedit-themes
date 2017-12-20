@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+  <?xml version="1.0" encoding="UTF-8"?>
 
 <style-scheme id="CalmCoder" _name="calmcoder" version="1.0">
   <author>Vikas Yadav</author>
@@ -45,20 +45,20 @@
   <style name="def:decimal" foreground="#ffcc33"/>
   <style name="def:doc-comment" foreground="#chocolate"/>
   <style name="def:doc-comment-element" foreground="#chocolate"/>
-  <style name="def:error" foreground="#f8f8f0" background="#f92672"/>
+  <style name="def:error" foreground="#f8f8f0" background="#ffcc66"/>
   <style name="def:floating-point" foreground="#ffcc33"/>
   <style name="def:function" foreground="#a6e22e"/>
   <style name="def:identifier" foreground="#ffffff"/>
-  <style name="def:keyword" foreground="#f92672"/>
+  <style name="def:keyword" foreground="#ffcc66"/>
   <style name="def:note" foreground="#chocolate"/>
   <style name="def:number" foreground="#ffcc33"/>
-  <style name="def:operator" foreground="#f92672"/>
+  <style name="def:operator" foreground="#ffcc66"/>
   <style name="def:preprocessor" foreground="#66d9ef"/>
-  <style name="def:reserved" foreground="#f92672"/>
+  <style name="def:reserved" foreground="#ffcc66"/>
   <style name="def:shebang" foreground="#chocolate"/>
   <style name="def:special-char" foreground="#66d9ef"/>
   <style name="def:special-constant" foreground="#ffcc33"/>
-  <style name="def:statement" foreground="#f92672"/>
+  <style name="def:statement" foreground="#ffcc66"/>
   <style name="def:string" foreground="#ffcc33"/>
   <style name="def:type" foreground="#66d9ef" italic="true"/> 
   </style-scheme>
