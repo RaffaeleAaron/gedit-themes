@@ -1,6 +1,6 @@
 # Themes for Gedit 3 and 2
 
-Version 0.3.0
+Version 0.4.0
 
 ---
 
@@ -37,6 +37,18 @@ Pass the `-o` option to the script to install the themes for gedit 2.x version:
 Please note you can combine `-o` with `-a` option, like: `-oa`, to install for all users for 2.x version.
 
 ## Changelog
+
+### 1.0.0
+ - Add Metallic Bottle theme (thanks to Tomasz Wyderka)
+ - Add Brackets theme (thanks to romu70)
+ - Add Calm Coder theme (thanks to vikaskyadav)
+ - Add XMint Theme (thanks to sam0hack)
+ - Add Vibrant Geek theme (thanks to sthesing)
+ - Add back Gedit 2 support to the install script (thanks to typekpb)
+ - Add selection color to Zenburn theme 
+ - Remove duplicate Vibrant Ink theme
+ - Fix missing selection background color in some themes
+ - Change cursor color in Zenburn theme (thanks to typekpb)
 
 ### 0.3.0
  - Add Solarized Dark and Light themes (thanks to mattcan)
