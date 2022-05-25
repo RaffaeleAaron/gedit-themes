@@ -26,6 +26,7 @@
 <!-- Colors -->
 
   <color name="off_white" value="#f8f8f8"/>
+  <color name="off_white" value="#f8f8f8"/>
   <color name="black_grey" value="#141414"/>
   <color name="tinted_grey" value="#3f3c40"/>
   <color name="dark_grey" value="#665f57"/>
